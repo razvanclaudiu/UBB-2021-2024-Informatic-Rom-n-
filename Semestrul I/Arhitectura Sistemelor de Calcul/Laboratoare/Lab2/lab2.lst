@@ -1,0 +1,43 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  
+     5                                  extern exit           
+     6                                  import exit msvcrt.dll   
+     7                                                       
+     8                                  
+     9                                  
+    10                                  segment data use32 class=data
+    11 00000000 07                          a db 7
+    12 00000001 CDAB                        b dw 0abcdh     
+    13 00000003 CDAB3412                    c dd 1234abcdh
+    14                                  
+    15                                  
+    16                                  segment code use32 class=code
+    17                                      start:
+    18                                          ; incarcarea unui registru cu o valoare imediata
+    19                                          
+    20                                          ; mov al, 7            ; AL=7
+    21                                          ; mov al, 7h
+    22                                          ; mov al ,111b
+    23                                          
+    24                                          ; INCORECT - AL are 8 biti, dar 256 are 9 biti
+    25                                          ; mov eax, 0
+    26                                          ; mov al, 256        
+    27                                          
+    28                                          ;mov ax, 256
+    29                                  
+    30                                          ; incarcarea adresei/offset unei variabile
+    31                                          ; mov eax, a
+    32                                          
+    33                                          ; incarcarea valorii unei variabile
+    34                                          ; mov eax, 0
+    35                                          ; mov al, [a]
+    36                                          
+    37 00000000 BB00000000                      mov ebx, 0
+    38                                          ; INCORECT
+    39                                          ; mov bl, [b]
+    40 00000005 668B1D[01000000]                mov bx, [b]
+    41                                          
+    42 0000000C 6A00                            push  dword 0      
+    43 0000000E FF15[00000000]                  call  [exit]      

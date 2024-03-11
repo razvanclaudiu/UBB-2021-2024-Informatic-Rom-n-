@@ -1,0 +1,52 @@
+bits 32 
+
+global start        
+extern exit               
+import exit msvcrt.dll    
+                          
+segment data use32 class=data
+    a db 45
+    b dw 78
+    e dd 99
+    x dq 50
+    temp resd 0
+;(a*a/b+b*b)/(2+b)+e-x fara semn
+segment code use32 class=code
+    start:
+        ;a*a
+        mov al, [a]     ;AL = a
+        mul byte [a]    ;AX = a*a
+        
+        ;a*a/b
+        mov dx, 0       ;DX:AX = a*a
+        div word [b]    ;AX = a*a/b, DX = a*a%b
+        mov bx, ax      ;BX = a*a/b
+        
+        ;b*b
+        mov ax, [b]     ;AX = b
+        mul word [b]    ;DX:AX = b*b
+        
+        ;(a*a/b+b*b)
+        mov cx, 0       ;CX:BX = a*a/b
+        add ax, bx      ;
+        adc dx, cx      ;DX:AX = a*a/b+b*b
+        
+        ;(a*a/b+b*b)/(2+b)
+        mov bx, [b]     ; BX = b
+        add bx, 2       ; BX = b + 2
+        div bx          ; AX = DX:AX/BX, DX = DX:AX%BX
+        
+        ;(a*a/b+b*b)/(2+b)+e
+        mov ebx, 0      ;EBX = 0
+        mov bx, ax      ;EBX = (a*a/b+b*b)/(2+b)
+        add ebx, [e]    ;EBX = (a*a/b+b*b)/(2+b)
+        
+        ;(a*a/b+b*b)/(2+b)+e-x
+        mov ecx, 0              ;ECX:EBX = (a*a/b+b*b)/(2+b)+e
+        mov eax, dword [x]      ;
+        mov edx, dword [x+4]    ;EDX:EAX = x
+        sub ebx, eax            ;
+        sbb ecx, edx            ;ECX:EBX = (a*a/b+b*b)/(2+b)+e-x
+        
+        push    dword 0      
+        call    [exit]       

@@ -1,0 +1,42 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  
+     5                                  extern exit           
+     6                                  import exit msvcrt.dll   
+     7                                                         
+     8                                                         
+     9                                  segment data use32 class=data
+    10 00000000 96DDD1E9                    m dd 11101001110100011101110110010110b
+    11 00000004 07086704                    mnew dd 73861127
+    12                                    
+    13                                  ; Se da dublucuvantul M. Sa se obtina dublucuvantul MNew astfel:
+    14                                  ; bitii 0-3 a lui MNew sunt identici cu bitii 5-8 a lui M
+    15                                  ; bitii 4-7 a lui MNew au valoarea 1
+    16                                  ; bitii 27-31 a lui MNew au valoarea 0
+    17                                  ; bitii 8-26 din MNew sunt identici cu bitii 8-26 a lui M.
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ;bitii 0-3 a lui MNew sunt identici cu bitii 5-8 a lui M
+    21 00000000 BBE0010000                      mov ebx, 111100000b   ;masca ptr bitii 5-8
+    22 00000005 A1[00000000]                    mov eax, [m]          ;EAX = m
+    23 0000000A 21D8                            and eax, ebx          ;bitii 5-8 din EAX sunt izolati
+    24 0000000C C1C805                          ror eax, 5            ;bitii 0-3 din EAX = bitii 5-8 din m
+    25 0000000F A3[04000000]                    mov [mnew], eax       ;bitii 0-3 din mnew = bitii 5-8 din m
+    26                                          
+    27                                          ;bitii 4-7 a lui MNew au valoarea 1
+    28 00000014 BBF0000000                      mov ebx, 11110000b    ;biti 4-7 = 1
+    29                                          ; add [mnew], ebx       ;bitii 4-7 din mnew = 1
+    30 00000019 091D[04000000]                  or [mnew], ebx       ;bitii 4-7 din mnew = 1       Trebuia OR nu ADD       
+    31                                          
+    32                                          ;bitii 8-26 din MNew sunt identici cu bitii 8-26 a lui M
+    33 0000001F BB00FFFF07                      mov ebx, 111111111111111111100000000b   ;masca ptr bitii 8-26
+    34 00000024 A1[00000000]                    mov eax, [m]           ;EAX = m
+    35 00000029 21D8                            and eax, ebx           ;bitii 8-26 diN EAX sunt izolatii
+    36 0000002B 0105[04000000]                  add [mnew], eax        ;bitii 8-26 din mnew = bitii 8-26 din m
+    37 00000031 0905[04000000]                  or [mnew], eax        ;bitii 8-26 din mnew = bitii 8-26 din m   Trebuia OR nu ADD
+    38                                          
+    39                                          ;bitii 27-31 a lui MNew au deja valoarea 0
+    40                                          
+    41 00000037 6A00                            push    dword 0
+    42 00000039 FF15[00000000]                  call    [exit]     

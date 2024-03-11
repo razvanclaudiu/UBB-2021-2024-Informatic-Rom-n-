@@ -1,0 +1,85 @@
+     1                                  bits 32 
+     2                                  
+     3                                  global start  
+     4                                  
+     5                                  extern exit, printf            
+     6                                  import exit msvcrt.dll
+     7                                  import printf msvcrt.dll
+     8                                                      
+     9                                  segment data use32 class=data
+    10 00000000 617061696100                sir1 db "apaia", 0
+    11 00000006 617061696100                sir2 db "apaia", 0
+    12 0000000C 05000000                    len1 dd 5
+    13 00000010 05000000                    len2 dd 5
+    14 00000014 256400                      format_nr db "%d", 0
+    15                                  segment code use32 public class=code
+    16                                      start:
+    17 00000000 BB01000000                      mov ebx, 1
+    18                                          ; push dword sir
+    19                                          ; push dword sir_initial
+    20                                          ; push dword len
+    21                                          ; push dword len_initial
+    22 00000005 68[06000000]                    push dword sir2
+    23 0000000A 68[00000000]                    push dword sir1
+    24 0000000F FF35[10000000]                  push dword [len2]
+    25 00000015 FF35[0C000000]                  push dword [len1]
+    26 0000001B 50                              push dword eax
+    27 0000001C 8B442404                        mov eax, [esp+4]
+    28 00000020 A3[0C000000]                    mov [len1], eax
+    29 00000025 8B442408                        mov eax, [esp+8]
+    30 00000029 A3[10000000]                    mov [len2], eax
+    31 0000002E 3B05[0C000000]                  cmp eax, [len1]
+    32 00000034 773E                            ja invalid
+    33 00000036 8B74240C                        mov esi, [esp+12]
+    34 0000003A 8B7C2410                        mov edi, [esp+16]
+    35 0000003E 8B0D[0C000000]                  mov ecx, [len1]
+    36 00000044 2B0D[10000000]                  sub ecx, [len2]
+    37 0000004A 83C101                          add ecx, 1
+    38                                      
+    39                                      loop_1:
+    40 0000004D AC                              lodsb ; al = ds:esi, esi = esi + 1 (al = a[i], i = {0, ..., n - m})
+    41                                              
+    42 0000004E 56                              push esi
+    43 0000004F 51                              push ecx
+    44                                              
+    45 00000050 BA00000000                      mov edx, 0 ; ebx = 0
+    46 00000055 8B0D[10000000]                  mov ecx, [len2] ; ecx = len2
+    47                                              
+    48 0000005B E309                            jecxz sari_1
+    49                                          
+    50                                      loop_2: ; (comparare a[i + j] si b[j], j = {0, ..., m - 1})
+    51 0000005D 3A0417                          cmp al, [edi + edx]
+    52 00000060 AC                              lodsb ; al = ds:esi, esi = esi + 1
+    53 00000061 7503                            jne sari_1
+    54                                                  ; al == [b + ebx] (a[i + j] == b[j])
+    55 00000063 42                              inc edx ; ebx = ebx + 1                        
+    56 00000064 E2F7                            loop loop_2
+    57                                          
+    58                                      sari_1:
+    59                                   
+    60 00000066 59                              pop ecx
+    61 00000067 5E                              pop esi
+    62                                              
+    63 00000068 3B15[10000000]                  cmp edx, [len2]
+    64 0000006E 7502                            jne sari_2
+    65 00000070 EB07                            jmp final
+    66                                          
+    67                                      ; mov eax, esi
+    68                                      ; sub eax, sir1 ; eax = esi - a (eax = i, pasul curent)
+    69                                      sari_2:
+    70 00000072 E2D9                            loop loop_1
+    71                                      
+    72                                      invalid:
+    73 00000074 BB00000000                      mov ebx, 0
+    74                                          
+    75                                      final:
+    76                                          
+    77 00000079 53                              push dword ebx
+    78 0000007A 68[14000000]                    push dword format_nr
+    79 0000007F FF15[00000000]                  call [printf]
+    80 00000085 83C408                          add esp, 4*2
+    81                                          
+    82 00000088 C3                              ret
+    83                                          
+    84 00000089 6A00                            push    dword 0     
+    85 0000008B FF15[00000000]                  call    [exit]       

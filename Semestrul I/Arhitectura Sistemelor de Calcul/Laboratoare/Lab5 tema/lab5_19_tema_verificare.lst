@@ -1,0 +1,78 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll   
+     7                                                           
+     8                                  segment data use32 class=data
+     9 00000000 020103FDFC02FA              a db 2, 1, 3, -3, -4, 2, -6
+    10                                      alen equ $-a    ; lungimea lui a
+    11 00000007 0405FB07FAFE01              b db 4, 5, -5, 7, -6, -2, 1
+    12                                      blen equ $-b    ; lungimea lui b
+    13 0000000E <res 0000000E>              r resb alen + blen  
+    14                                      len equ $-r
+    15                                  segment code use32 class=code
+    16                                      start:
+    17 00000000 BA00000000                      mov edx, 0      ;EDX = 0
+    18 00000005 BB07000000                      mov ebx, alen   ;EBX = lungimea lui a
+    19 0000000A BF00000000                      mov edi, 0      ;j = 0
+    20                                          
+    21                                          ;pregatire pentru sirul a
+    22                                          sir1:
+    23 0000000F B907000000                          mov ecx, alen   ;ECX = lungimea lui a
+    24 00000014 E307                                jecxz sir2      ;sarim peste primul sir daca ECX = 0
+    25 00000016 BE00000000                          mov esi, 0      ;i = 0
+    26 0000001B EB0E                                jmp mov1
+    27                                          
+    28                                          ;pregatire pentru sirul b
+    29                                          sir2:
+    30 0000001D B907000000                          mov ecx, blen   ;ECX = lungimea lui b
+    31 00000022 E347                                jecxz final     ;sarim la final daca b nu are elemente
+    32 00000024 BE00000000                          mov esi, 0      ;i = 0
+    33 00000029 EB0C                                jmp mov2
+    34                                          
+    35                                          ;adaugarea elementelor din a
+    36                                          mov1:
+    37 0000002B 39DA                                cmp edx, ebx
+    38 0000002D 7D08                                jge mov2        ;Daca edx > ebx => sirul a a fost parcurs
+    39                                                              ;si trece la sirul b
+    40 0000002F 8A86[00000000]                      mov al, [a+esi] ;AL = pe rand elemetele lui a
+    41 00000035 EB08                                jmp repeta
+    42                                          
+    43                                          ;adaugarea elemetelor din b
+    44                                          mov2:
+    45 00000037 8A86[07000000]                      mov al, [b+esi] ;AL = pe rand elementele lui b
+    46 0000003D EB00                                jmp repeta
+    47                                              
+    48                                          ;verificarea daca elementul este negativ si pozitiv    
+    49                                          repeta:
+    50 0000003F 3C00                                cmp al, 0       ;verificam daca este negativ
+    51 00000041 7D0D                                jge nextnr     ;sarim daca nu este negativ
+    52 00000043 A801                                test al, 1h     ;verificam daca este par
+    53 00000045 7402                                jz par_negativ ;daca este par sarim la adaugare
+    54 00000047 EB07                                jmp nextnr     ;altfel sarim la urmatorul numar
+    55                                          
+    56                                          ;adaugarea in sirul r a unui element pas si negativ
+    57                                          par_negativ:
+    58 00000049 8887[0E000000]                      mov [r+edi], al ;mutam in r numare negative si pare
+    59 0000004F 47                                  inc edi
+    60                                          
+    61                                          ;incrementare pentru a trece la urmatorul element
+    62                                          nextnr:
+    63 00000050 46                                  inc esi ;i = i + 1
+    64 00000051 42                                  inc edx
+    65                                              
+    66 00000052 E2D7                            loop mov1
+    67 00000054 39DA                            cmp edx, ebx    ;verifica daca sirul "a" a fost parcurs
+    68 00000056 74C5                            jz sir2         ;daca da, se trece la sirul b
+    69                                  
+    70 00000058 B90E000000                      mov ecx, len
+    71 0000005D BE00000000                      mov esi, 0
+    72                                          repeta1:
+    73 00000062 8A9E[0E000000]                      mov bl, [r+esi]
+    74 00000068 46                                  inc esi
+    75 00000069 E2F7                            loop repeta1
+    76                                          final:
+    77 0000006B 6A00                                push    dword 0     
+    78 0000006D FF15[00000000]                      call    [exit]       

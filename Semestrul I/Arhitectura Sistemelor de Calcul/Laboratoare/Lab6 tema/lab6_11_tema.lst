@@ -1,0 +1,35 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  
+     4                                  
+     5                                  extern exit               
+     6                                  import exit msvcrt.dll    
+     7                                                            
+     8                                  
+     9                                  ; 11. Se da un sir A de dublucuvinte. Construiti doua siruri de octeti  
+    10                                  ; - B1: contine ca elemente partea superioara a cuvintelor superioare din A
+    11                                  ; - B2: contine ca elemente partea inferioara a cuvintelor inferioare din A
+    12                                  segment data use32 class=data
+    13 00000000 78567F1276DCFC9808-         A dd 127F5678h, 98FCDC76h, 05060108h
+    13 00000009 010605             
+    14                                      len equ ($-A)/4
+    15 0000000C <res 00000003>              B1 resb len
+    16 0000000F <res 00000003>              B2 resb len
+    17                                  segment code use32 class=code
+    18                                  
+    19                                      start:
+    20 00000000 BE[00000000]                    mov esi, A      ;esi = A, astfel incat sa putem parcurge sirul
+    21 00000005 BF00000000                      mov edi, 0      ;i = 0
+    22 0000000A FC                              cld             ;parcurgem sirul de la stanga la dreapta (DF = 0)
+    23 0000000B B903000000                      mov ecx, len    ;vom parcurge elementele sirului intr-o bucla   loop cu len iteratii
+    24                                        
+    25                                      repeta:
+    26 00000010 AD                              lodsd ;EAX = dublucuvintele pe rand pana cand s-a parcurs sirul "A"
+    27 00000011 8887[0F000000]                  mov [B2+edi], al    ;B2 = partea inferioara a cuvantului inferior
+    28 00000017 C1E818                          shr eax, 24         ;AL = partea superioara a cuvantului superior
+    29 0000001A 8887[0C000000]                  mov [B1+edi], al    ;B1 = partea superioara a cuvantului superior
+    30 00000020 47                              inc edi             ;i = i + 1
+    31 00000021 E2ED                        loop repeta
+    32                                      
+    33 00000023 6A00                            push    dword 0      
+    34 00000025 FF15[00000000]                  call    [exit]       
