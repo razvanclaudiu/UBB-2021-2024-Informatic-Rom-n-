@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1653399978 source:c:\users\acer\onedrive\desktop\examen_ag\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<bits/stdc++.h>
+
+1653400921 source:c:\users\acer\onedrive\desktop\examen_ag\fis.cpp
+	<iostream>
+	<fstream>
+	<bits/stdc++.h>
+

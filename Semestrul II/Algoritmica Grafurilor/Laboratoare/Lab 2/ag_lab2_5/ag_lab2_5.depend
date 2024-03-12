@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1647775748 source:c:\users\acer\onedrive\desktop\ag_lab2_5\main.cpp
+	<iostream>
+	<fstream>
+	<string.h>
+
+1647772150 source:d:\folders\scoala\facultate\sem 2\algoritmica grafelor\lab 2\ag_lab2_5\main.cpp
+	<iostream>
+	<fstream>
+	<string.h>
+

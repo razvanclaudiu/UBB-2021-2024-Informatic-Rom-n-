@@ -1,0 +1,321 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26432",
+          "message": {
+            "text": "If you define or delete any default operation in the type 'class Masina', define or delete them all (c.21)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/entities.h"
+                },
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 2,
+                  "endLine": 23,
+                  "endColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Masina::{ctor}",
+                  "decoratedName": "??0Masina@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26432",
+          "message": {
+            "text": "If you define or delete any default operation in the type 'class Pereche', define or delete them all (c.21)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/entities.h"
+                },
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 2,
+                  "endLine": 52,
+                  "endColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Pereche::{ctor}",
+                  "decoratedName": "??0Pereche@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26489",
+          "message": {
+            "text": "Don't dereference a pointer that may be invalid: 'allotemp.10'. '(temporary 10)' may have been invalidated at line 36 (lifetime.1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/repository.cpp"
+                },
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 2,
+                  "endLine": 36,
+                  "endColumn": 10
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MasinaRepository::cauta_repo",
+                  "decoratedName": "?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/repository.cpp"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "important"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26487",
+          "message": {
+            "text": "Don't return a pointer '(30's result)' that may be invalid (lifetime.4)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/repository.cpp"
+                },
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 2,
+                  "endLine": 36,
+                  "endColumn": 10
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MasinaRepository::cauta_repo",
+                  "decoratedName": "?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/repository.cpp"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 2
+                          }
+                        }
+                      },
+                      "importance": "important"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26440",
+          "message": {
+            "text": "Function 'MasinaListRepository::lst_empty_repo' can be declared 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/repository.cpp"
+                },
+                "region": {
+                  "startLine": 95,
+                  "startColumn": 28,
+                  "endLine": 95,
+                  "endColumn": 28
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MasinaListRepository::lst_empty_repo",
+                  "decoratedName": "?lst_empty_repo@MasinaListRepository@@QEAAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26460",
+          "message": {
+            "text": "The reference argument 'allM' for function 'MasinaListRepository::lst_genereaza_repo' can be marked as const (con.3)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/repository.cpp"
+                },
+                "region": {
+                  "startLine": 100,
+                  "startColumn": 28,
+                  "endLine": 100,
+                  "endColumn": 28
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MasinaListRepository::lst_genereaza_repo",
+                  "decoratedName": "?lst_genereaza_repo@MasinaListRepository@@QEAAXAEAV?$vector@VMasina@@V?$allocator@VMasina@@@std@@@std@@H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.31.31104.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00007FF66ECB9CC0 -il C:\\Users\\Acer\\AppData\\Local\\Temp\\_CL_30bb72ebast -typedil -f repository.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1931 -D_MSC_FULL_VER=193131104 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -nologo -W 4 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -Zc:wchar_t -Zc:forScope -permissive- -Fox64\\Debug\\repository.obj -Fdx64\\Debug\\vc143.pdb -external:W 4 -Gd -analyze:projectdirectory C:\\Users\\Acer\\OneDrive\\Desktop\\Lab 8 - Copy2 -analyze:rulesetdirectory ;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset ruleset1.ruleset -analyze:quiet -analyze:plugin C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.6.1\\Include\\um -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.6.1\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.6.1\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/entities.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "0746d083e57c1c2bedbd45602f61f4627a562253aaddea73256081a0ee208fb3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/ui.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "24997954d67ec976615206eb57f478f2768fe713a6795af130995f12e8b5bdaf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab 8 - copy2/ui.h"
+          },
+          "hashes": {
+            "sha-256": "7f3ef9dcb27cb46ed347d95972d814974f2ae5f3827d8f7c71c2eabab8047e9b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab 8 - copy2/service.h"
+          },
+          "hashes": {
+            "sha-256": "3209e8981dc4c501e0bd630689bff813e36c744204cbadda2927c5c2333b6c68"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab 8 - copy2/repository.h"
+          },
+          "hashes": {
+            "sha-256": "12fab9506b77311a9c4ca7a7337d5c5be3bf662f80b1d4c0ee7daed98e1acb5e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab 8 - copy2/validator.h"
+          },
+          "hashes": {
+            "sha-256": "1885dcf9fd7753d06e4cae0ab1ad15ddd0dcad03d919585d04c0a9ef0fcf3c33"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/service.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "cc56a299616f9f807afe57d349dc5d7d0fae9a32338e2ee9f1a93bbc935ea2fc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab 8 - Copy2/repository.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "0e4bc31d8e5e66480658595070cb32c445b0cbf47b39cdda390074251ea7a4c4"
+          }
+        }
+      ]
+    }
+  ]
+}

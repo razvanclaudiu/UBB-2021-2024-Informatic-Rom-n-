@@ -1,0 +1,6 @@
+﻿  MDO.cpp
+C:\Users\Acer\OneDrive\Desktop\sda_lab7\MDO.cpp(55,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Acer\OneDrive\Desktop\sda_lab7\MDO.cpp(97,24): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Acer\OneDrive\Desktop\sda_lab7\MDO.cpp(99,24): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Acer\OneDrive\Desktop\sda_lab7\MDO.cpp(150,45): warning C4390: ';': empty controlled statement found; is this the intent?
+  sda_lab7.vcxproj -> C:\Users\Acer\OneDrive\Desktop\sda_lab7\x64\Debug\sda_lab7.exe

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>ui.cpp</FILENAME>
+      <LINE>71</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26494</DEFECTCODE>
+    <DESCRIPTION>Variable 'cmd' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
+    <FUNCTION>ConsoleUI::run</FUNCTION>
+    <DECORATED>?run@ConsoleUI@@QEAAXXZ</DECORATED>
+    <FUNCLINE>69</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>cmd</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>234</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26481</DEFECTCODE>
+    <DESCRIPTION>Don't use pointer arithmetic. Use span instead (bounds.1).</DESCRIPTION>
+    <FUNCTION>vectorIterator&lt;Masina&gt;::element</FUNCTION>
+    <DECORATED>?element@?$vectorIterator@VMasina@@@@QEBAAEAVMasina@@XZ</DECORATED>
+    <FUNCLINE>233</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

@@ -1,0 +1,6 @@
+C:\Users\Acer\OneDrive\Desktop\Lab 8\x64\Debug\Lab 8.exe
+C:\Users\Acer\OneDrive\Desktop\Lab 8\x64\Debug\Lab 8.exe.lastcodeanalysissucceeded
+C:\Users\Acer\OneDrive\Desktop\Lab 8\x64\Debug\NativeCodeAnalysis.read.1.tlog
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\x64\Debug\Lab 8.exe.lastcodeanalysissucceeded
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\x64\Debug\NativeCodeAnalysis.read.1.tlog
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\x64\Debug\Lab 8.exe

@@ -31,7 +31,7 @@ while true
     approx_ln_fix = vpa(approx_ln, 6); % Fix to 6 decimal places
     
     % Break the loop if the fixed precision values are equal
-    if abs(approx_ln_fix - true_ln) < 1e-6 % Check if the difference is negligible
+    if abs(approx_ln_fix - true_ln) < 1e-5 % Check if the difference is negligible
         break;
     end
 

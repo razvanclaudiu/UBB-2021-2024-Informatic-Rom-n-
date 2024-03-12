@@ -1,0 +1,3 @@
+C:\Users\Acer\OneDrive\Desktop\sda_lab2\x64\Debug\sda_lab2.exe
+C:\Users\Acer\OneDrive\Desktop\Facultate\SDA\sda_lab2\x64\Debug\sda_lab2.exe
+D:\Folders\Scoala\Facultate\Sem 2\SDA\sda_lab2\x64\Debug\sda_lab2.exe

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+      <FILENAME>TestExtins.cpp</FILENAME>
+      <LINE>19</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6262</DEFECTCODE>
+    <DESCRIPTION>Function uses '480036' bytes of stack.  Consider moving some data to heap.</DESCRIPTION>
+    <FUNCTION>testCreeaza</FUNCTION>
+    <DECORATED>?testCreeaza@@YAXXZ</DECORATED>
+    <FUNCLINE>19</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+      <FILENAME>TestExtins.cpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6262</DEFECTCODE>
+    <DESCRIPTION>Function uses '480032' bytes of stack.  Consider moving some data to heap.</DESCRIPTION>
+    <FUNCTION>testAdauga</FUNCTION>
+    <DECORATED>?testAdauga@@YAXXZ</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+      <FILENAME>TestExtins.cpp</FILENAME>
+      <LINE>77</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6262</DEFECTCODE>
+    <DESCRIPTION>Function uses '480040' bytes of stack.  Consider moving some data to heap.</DESCRIPTION>
+    <FUNCTION>testSterge</FUNCTION>
+    <DECORATED>?testSterge@@YAXXZ</DECORATED>
+    <FUNCLINE>77</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+      <FILENAME>TestExtins.cpp</FILENAME>
+      <LINE>140</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6262</DEFECTCODE>
+    <DESCRIPTION>Function uses '1440128' bytes of stack.  Consider moving some data to heap.</DESCRIPTION>
+    <FUNCTION>testIterator</FUNCTION>
+    <DECORATED>?testIterator@@YAXXZ</DECORATED>
+    <FUNCLINE>140</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+      <FILENAME>TestExtins.cpp</FILENAME>
+      <LINE>197</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6262</DEFECTCODE>
+    <DESCRIPTION>Function uses '480052' bytes of stack.  Consider moving some data to heap.</DESCRIPTION>
+    <FUNCTION>testQuantity</FUNCTION>
+    <DECORATED>?testQuantity@@YAXXZ</DECORATED>
+    <FUNCLINE>197</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

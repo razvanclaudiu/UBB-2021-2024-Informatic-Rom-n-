@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1647965617 source:c:\users\acer\onedrive\desktop\ag_lab2_2\main.cpp
+	<iostream>
+	<fstream>
+

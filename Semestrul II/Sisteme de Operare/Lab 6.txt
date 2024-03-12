@@ -1,0 +1,117 @@
+echo ${NUME}
+MADALINA
+
+echo ${NUME:3:5}
+ALINA
+
+echo ${NUME:3}
+ALINA
+
+echo ${NUME:-3}
+INA
+
+unset NUME
+echo ${NUME}
+//nimic
+
+echo ${NUME:=ALINA}
+ALINA
+
+echo $NUME
+ALINA
+
+echo ${NUME}
+ALINA
+
+echo ${NUME:-OANA}
+ALINA
+
+
+
+
+parameter expansion
+${parameter}
+
+echo $N
+
+DIR=$1
+${DIR:/bin}
+
+${var:=word}
+
+
+
+
+
+
+
+
+
+if [ $# -eq 0];then
+	echo "Este nevoie de un parametru natural"
+	exit 1
+fi
+
+for x in {1..$N};do
+
+	echo $x
+done
+
+
+
+
+
+
+if [ $# -eq 0];then
+	echo "Este nevoie de un parametru natural"
+	exit 1
+fi
+
+for x in `seq 1 $1`;do
+
+	echo $x
+done
+
+
+
+
+
+
+if [ $# -eq 0];then
+	echo "Este nevoie de un parametru natural"
+	exit 1
+fi
+
+for x in `seq 1 $1`;do
+
+	touch "file_$x.txt"
+	sed -n '$x,+5p' /etc/passwd > "file_$x.txt"
+done
+
+
+
+
+
+if [ $# -eq 0];then
+	echo "Este nevoie de un parametru natural"
+	exit 1
+fi
+
+for x in `seq 1 $x`;do
+
+	if [ -f $x ];then
+		echo "Fisier: $x"
+		echo  -n "NR de caractere: "
+		wc -m <$x
+		echo -n "Nr de linii: "
+		//nu-i tot
+done
+
+
+
+
+for f in find . -type f;do
+	if file $f | grep 'ASCII text';then
+		echo "Fisier: $f"
+		NL = 
+done 

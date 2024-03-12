@@ -1,0 +1,21 @@
+﻿  entities.cpp
+  Lab6.cpp
+  repository.cpp
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\repository.cpp(55,68): warning C4244: 'argument': conversion from '_Rep' to 'unsigned int', possible loss of data
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+  service.cpp
+  tests.cpp
+  ui.cpp
+  validator.cpp
+  Running Code Analysis for C/C++...
+  Generating Code...
+  Lab 8.vcxproj -> C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\x64\Debug\Lab 8.exe
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\entities.h(23): warning C26432: If you define or delete any default operation in the type 'class Masina', define or delete them all (c.21).
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\repository.cpp(36): warning C26489: Don't dereference a pointer that may be invalid: 'allotemp.10'. '(temporary 10)' may have been invalidated at line 36 (lifetime.1).
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\repository.cpp(36): warning C26487: Don't return a pointer '(30's result)' that may be invalid (lifetime.4).
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\service.cpp(32): warning C26489: Don't dereference a pointer that may be invalid: 'allotemp.3'. '(temporary 3)' may have been invalidated at line 32 (lifetime.1).
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\service.cpp(32): warning C26487: Don't return a pointer '(28's result)' that may be invalid (lifetime.4).
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\ui.cpp(99): warning C26494: Variable 'cmd' is uninitialized. Always initialize an object (type.5).

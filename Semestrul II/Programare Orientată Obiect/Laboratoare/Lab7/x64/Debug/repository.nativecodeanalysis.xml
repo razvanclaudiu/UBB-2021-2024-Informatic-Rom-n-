@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>51</LINE>
+      <COLUMN>3</COLUMN>
+    </SFA>
+    <DEFECTCODE>26489</DEFECTCODE>
+    <DESCRIPTION>Don't dereference a pointer that may be invalid: 'allotemp.4'. '(temporary 4)' may have been invalidated at line 51 (lifetime.1).</DESCRIPTION>
+    <FUNCTION>MasinaRepository::cauta_repo</FUNCTION>
+    <DECORATED>?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>46</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+        <FILENAME>repository.cpp</FILENAME>
+        <LINE>51</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>51</LINE>
+      <COLUMN>3</COLUMN>
+    </SFA>
+    <DEFECTCODE>26487</DEFECTCODE>
+    <DESCRIPTION>Don't return a pointer '(46's result)' that may be invalid (lifetime.4).</DESCRIPTION>
+    <FUNCTION>MasinaRepository::cauta_repo</FUNCTION>
+    <DECORATED>?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>46</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+        <FILENAME>repository.cpp</FILENAME>
+        <LINE>51</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>58</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26494</DEFECTCODE>
+    <DESCRIPTION>Variable 'j' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
+    <FUNCTION>MasinaRepository::ordonare_repo</FUNCTION>
+    <DECORATED>?ordonare_repo@MasinaRepository@@QEAAXP6A_NAEBVMasina@@0@Z@Z</DECORATED>
+    <FUNCLINE>56</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>j</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>77</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>This kind of function should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$vectorClass@VMasina@@@@QEAA@$$QEAV0@@Z</DECORATED>
+    <FUNCLINE>77</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$vectorClass@VMasina@@@@QEAA@H@Z</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$vectorClass@VMasina@@@@QEAA@H@Z</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>147</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26481</DEFECTCODE>
+    <DESCRIPTION>Don't use pointer arithmetic. Use span instead (bounds.1).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::at</FUNCTION>
+    <DECORATED>?at@?$vectorClass@VMasina@@@@QEBAAEAVMasina@@H@Z</DECORATED>
+    <FUNCLINE>145</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>122</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::ensureCapacity</FUNCTION>
+    <DECORATED>?ensureCapacity@?$vectorClass@VMasina@@@@AEAAXXZ</DECORATED>
+    <FUNCLINE>117</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>122</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26400</DEFECTCODE>
+    <DESCRIPTION>Do not assign the result of an allocation or a function call with an owner&lt;T&gt; return value to a raw pointer, use owner&lt;T&gt; instead (i.11).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::ensureCapacity</FUNCTION>
+    <DECORATED>?ensureCapacity@?$vectorClass@VMasina@@@@AEAAXXZ</DECORATED>
+    <FUNCLINE>117</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>234</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26481</DEFECTCODE>
+    <DESCRIPTION>Don't use pointer arithmetic. Use span instead (bounds.1).</DESCRIPTION>
+    <FUNCTION>vectorIterator&lt;Masina&gt;::element</FUNCTION>
+    <DECORATED>?element@?$vectorIterator@VMasina@@@@QEBAAEAVMasina@@XZ</DECORATED>
+    <FUNCLINE>233</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

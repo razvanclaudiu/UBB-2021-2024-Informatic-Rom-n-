@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>repository.h</FILENAME>
+      <LINE>13</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>MasinaRepository::{ctor}</FUNCTION>
+    <DECORATED>??0MasinaRepository@@QEAA@XZ</DECORATED>
+    <FUNCLINE>13</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$vectorClass@VMasina@@@@QEAA@AEBV0@@Z</DECORATED>
+    <FUNCLINE>46</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$vectorClass@VMasina@@@@QEAA@H@Z</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$vectorClass@VMasina@@@@QEAA@H@Z</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>73</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26823</DEFECTCODE>
+    <DESCRIPTION>Dereferencing a possibly null pointer 'allotemp.1' (lifetime.1).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::{dtor}</FUNCTION>
+    <DECORATED>??1?$vectorClass@VMasina@@@@QEAA@XZ</DECORATED>
+    <FUNCLINE>72</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+        <FILENAME>vectorClass.h</FILENAME>
+        <LINE>72</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+        <FILENAME>vectorClass.h</FILENAME>
+        <LINE>73</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+        <FILENAME>vectorClass.h</FILENAME>
+        <LINE>73</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+        <FILENAME>vectorClass.h</FILENAME>
+        <LINE>73</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\</FILEPATH>
+      <FILENAME>vectorClass.h</FILENAME>
+      <LINE>147</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26481</DEFECTCODE>
+    <DESCRIPTION>Don't use pointer arithmetic. Use span instead (bounds.1).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;Masina&gt;::at</FUNCTION>
+    <DECORATED>?at@?$vectorClass@VMasina@@@@QEBAAEAVMasina@@H@Z</DECORATED>
+    <FUNCLINE>145</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

@@ -1,0 +1,22 @@
+[2022-03-16 21:48:51] [info] Start Program:
+Path:"C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 2\x64\Debug\Lab 2.exe"
+Arguments:
+Working directory: "C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 2\"
+Modules: Selected: C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 3\x64\Debug\Lab 3.exe Excluded: 
+Sources: Selected: C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 3 Excluded: Lab 2.c 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Acer\AppData\Local\Temp\kftkmkfq.2yv 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-03-16 21:48:54] [info] ----------------------------------------------------
+[2022-03-16 21:48:54] [info] Coverage binary generated in file: C:\Users\Acer\AppData\Local\Temp\kftkmkfq.2yv
+[2022-03-16 21:48:54] [info] ----------------------------------------------------
+[2022-03-16 21:48:54] [warning] No modules were selected. Please check the values of --modules and --excluded_modules.
+You can try to remove all --modules and --excluded_modules and use --modules=C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 2\x64\Debug instead.

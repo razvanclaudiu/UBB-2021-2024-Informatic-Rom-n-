@@ -1,0 +1,8 @@
+﻿  App.cpp
+D:\Folders\Scoala\Facultate\Sem 2\SDA\sda_lab2\App.cpp(19,2): warning C4551: function call missing argument list
+  IteratorMultime.cpp
+  Multime.cpp
+  TestExtins.cpp
+  TestScurt.cpp
+  Generating Code...
+  sda_lab2.vcxproj -> D:\Folders\Scoala\Facultate\Sem 2\SDA\sda_lab2\x64\Debug\sda_lab2.exe

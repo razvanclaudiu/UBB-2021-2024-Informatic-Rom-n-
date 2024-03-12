@@ -1,0 +1,22 @@
+[2022-04-13 21:29:42] [info] Start Program:
+Path:"C:\Users\Acer\OneDrive\Desktop\Lab 8\x64\Debug\Lab 8.exe"
+Arguments:
+Working directory: "C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy\x64\Debug\Lab 8.tlog"
+Modules: Selected: C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy\x64\Debug\Lab 8.exe Excluded: 
+Sources: Selected: C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy Excluded: ui.cpp 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Acer\AppData\Local\Temp\etsvlo5k.jko 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-04-13 21:29:43] [info] ----------------------------------------------------
+[2022-04-13 21:29:43] [info] Coverage binary generated in file: C:\Users\Acer\AppData\Local\Temp\etsvlo5k.jko
+[2022-04-13 21:29:43] [info] ----------------------------------------------------
+[2022-04-13 21:29:43] [warning] No modules were selected. Please check the values of --modules and --excluded_modules.
+You can try to remove all --modules and --excluded_modules and use --modules=C:\Users\Acer\OneDrive\Desktop\Lab 8\x64\Debug instead.

@@ -1,0 +1,130 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.31.31104.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00007FF7489A9CC0 -il C:\\Users\\Acer\\AppData\\Local\\Temp\\_CL_d2cc0730ast -typedil -f repository.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1931 -D_MSC_FULL_VER=193131104 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -Zc:wchar_t -Zc:forScope -permissive- -Fox64\\Debug\\repository.obj -Fdx64\\Debug\\vc143.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\Acer\\OneDrive\\Desktop\\Lab6 -analyze:rulesetdirectory ;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset ruleset1.ruleset -analyze:quiet -analyze:plugin C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.6.1\\Include\\um -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.6.1\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.6.1\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab6/validator.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "596bca31fd7238329c128d01ef875dc315ea922adc4b593cf1a3dd0dfc2a2f5b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab6/validator.h"
+          },
+          "hashes": {
+            "sha-256": "0ceade3ebba40cff83ccab113cc50af910a67e28b933b1bc691ad3836d559902"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab6/entities.h"
+          },
+          "hashes": {
+            "sha-256": "055e283f5767e740a39e7721fba86e9160db45000910805fec77ba2b5caafb0e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Acer/OneDrive/Desktop/Lab6/ui.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "1a2344b1b40b6f32a985584c6c8e39b9a6df8b4720b942c1610ec520ae05e6df"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab6/ui.h"
+          },
+          "hashes": {
+            "sha-256": "9390e846e2339e511ae4ca05983a2ee861bac10869bcf0ec50505f8d4e68a285"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab6/service.h"
+          },
+          "hashes": {
+            "sha-256": "ad027807b1e168a5a8f6bc7a8dcbaa1096754d1ba3898e3b9c515832f3c1b1e5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab6/repository.h"
+          },
+          "hashes": {
+            "sha-256": "b898b26380c30f8f425380d5e21dd3e557a55b4234e717b4e88df045b5aec88e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab6/tests.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "8ceb380f11692d2d275e443030cb9a7c8e51cd6d49c656eb97e6e8cdbde79840"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab6/tests.h"
+          },
+          "hashes": {
+            "sha-256": "62e24c4d4e5e55925dd73fc14d9371d4a8195232bda361c0be84728550c42ac8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab6/service.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "660d50a99c8ec512e2ff30589728370ea547ab37ddf780bd53555e8e1888b35e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/acer/onedrive/desktop/lab6/repository.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "fbe41b490dcd5d063d361b98f5df9658060bb172012bde2755e9c62fb5def656"
+          }
+        }
+      ]
+    }
+  ]
+}

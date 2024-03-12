@@ -1,0 +1,2 @@
+C:\Users\Acer\OneDrive\Desktop\sda_lab2\x64\Debug\sda_lab2.exe
+C:\Users\Acer\OneDrive\Desktop\sda_lab2 - Copy\x64\Debug\sda_lab2_v2.exe

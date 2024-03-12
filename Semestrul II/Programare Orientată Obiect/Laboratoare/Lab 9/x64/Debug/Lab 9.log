@@ -1,0 +1,11 @@
+﻿  service.cpp
+  Lab 9.vcxproj -> C:\Users\Acer\OneDrive\Desktop\Lab 9\x64\Debug\Lab 9.exe
+C:\Users\Acer\OneDrive\Desktop\Lab 9\entities.h(23): warning C26432: If you define or delete any default operation in the type 'class Masina', define or delete them all (c.21).
+C:\Users\Acer\OneDrive\Desktop\Lab 9\undo.h(10): warning C26432: If you define or delete any default operation in the type 'class ActiuneUndo', define or delete them all (c.21).
+C:\Users\Acer\OneDrive\Desktop\Lab 9\repository.cpp(9): warning C26436: The type 'class MasinaRepository' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
+C:\Users\Acer\OneDrive\Desktop\Lab 9\repository.cpp(36): warning C26489: Don't dereference a pointer that may be invalid: 'allotemp.10'. '(temporary 10)' may have been invalidated at line 36 (lifetime.1).
+C:\Users\Acer\OneDrive\Desktop\Lab 9\repository.cpp(36): warning C26487: Don't return a pointer '(30's result)' that may be invalid (lifetime.4).
+C:\Users\Acer\OneDrive\Desktop\Lab 9\repository.cpp(166): warning C26436: The type 'class FileMasinaRepository' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
+C:\Users\Acer\OneDrive\Desktop\Lab 9\service.cpp(37): warning C26489: Don't dereference a pointer that may be invalid: 'allotemp.3'. '(temporary 3)' may have been invalidated at line 37 (lifetime.1).
+C:\Users\Acer\OneDrive\Desktop\Lab 9\service.cpp(37): warning C26487: Don't return a pointer '(33's result)' that may be invalid (lifetime.4).
+C:\Users\Acer\OneDrive\Desktop\Lab 9\ui.cpp(99): warning C26494: Variable 'cmd' is uninitialized. Always initialize an object (type.5).

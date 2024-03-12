@@ -1,0 +1,13 @@
+﻿  Lab6.cpp
+  entities.cpp
+  repository.cpp
+  service.cpp
+  tests.cpp
+  ui.cpp
+  validator.cpp
+  Running Code Analysis for C/C++...
+  Generating Code...
+  Lab6.vcxproj -> C:\Users\Acer\OneDrive\Desktop\Lab6\x64\Debug\Lab6.exe
+C:\Users\Acer\OneDrive\Desktop\Lab6\ui.cpp(20): warning C26494: Variable 'cmd' is uninitialized. Always initialize an object (type.5).
+C:\Users\Acer\OneDrive\Desktop\Lab6\validator.cpp(5): warning C26494: Variable 'sem' is uninitialized. Always initialize an object (type.5).
+C:\Users\Acer\OneDrive\Desktop\Lab6\validator.cpp(61): warning C26494: Variable 'sem' is uninitialized. Always initialize an object (type.5).

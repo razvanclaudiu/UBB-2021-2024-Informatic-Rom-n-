@@ -1,0 +1,9 @@
+SB67ARN,Toyota Motor Corporation,Toyota Yariss,automobil
+CJ34BGF,Honda Motor,HR-V,tractor
+SB12LDS,BMW Group,i4M50,tir
+CJ43FSD,Toyota Motor Corporation,Toyota Avalon,camion
+SB67ARA,Honda Motor,Civic Sedan,automobil
+SB99ZCF,Daimler,GLESUV,tir
+BV33UWU,Honda Motor,Civic Sedan,automobil
+SB45ABJ,fdfd,dfdf,automobil
+CJ10EFD,BMW Group,X2,camion

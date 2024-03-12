@@ -1,0 +1,411 @@
+https://tldp.org/LDP/abs/html/comparison-ops.html
+
+wc -l : Prints the number of lines in a file.
+wc -w : prints the number of words in a file.
+wc -c : Displays the count of bytes in a file.
+wc -m : prints the count of characters from a file.
+wc -L : prints only the length of the longest line in a file.
+
+VAR1="Linuxize"
+VAR2="Linuxize"
+
+if [ "$VAR1" = "$VAR2" ]; then
+    echo "Strings are equal."
+else
+    echo "Strings are not equal."
+
+
+-----------------------------------------------------------------------------------------
+1. Display a report showing the full name of all the users currently connected, and the number of processes belonging to each of them.
+
+#!/bin/bash
+
+a=$(cat who.fake | awk '{print $1}')
+
+for argv in $a
+do
+        b=$(cat ps.fake | awk '{print $1}' | grep $argv | wc | awk '{print $1}')
+        echo $argv $b
+done
+
+-----------------------------------------------------------------------------------------
+2. Find recursively in a directory all ".c" files having more than 500 lines. Stop after finding 2 such files.
+
+
+#!/bin/bash
+
+a=$(find dir | grep '\.c')
+declare -i nr
+nr=0
+for argv in $a
+do
+        b=$(cat $argv | grep -c ".")
+        if(($b >= 500))
+        then
+                let nr++
+                echo $argv
+        fi
+        if(($nr == 2))
+        then
+                exit 0
+        fi
+done
+-----------------------------------------------------------------------------------------
+3. Find recursively in a directory, all the files with the extension ".log" and sort their lines (replace the original file with the sorted content).
+
+
+#!/bin/bash
+
+a=$(find dir | grep '\.log')
+for argv in $a
+do
+        cat $argv | sort > result
+        rm -f $argv
+        mv result $argv
+done
+-----------------------------------------------------------------------------------------
+4. Find recursively in a given directory all the symbolic links, and report those that point to files/directories that no longer exist. Use operator -L to test if a path is a symbolic link, and operator -e to test if it exists (will return false if the target to which the link points does not exist)
+
+
+#!/bin/bash
+
+for link in $(find dir -type l);
+do
+        if [ ! -e "$link" ]; then
+                echo "Link $link is not valid"
+        else echo "Link $link is valid"
+        fi
+done
+-----------------------------------------------------------------------------------------
+5. Write a script that receives dangerous program names as command line arguments. The script will monitor all the processes in the system, and whenever a program known to be dangerous is run, the script will kill it and display a message.
+
+
+#!/bin/bash
+
+if [ -z $1 ]
+then
+        echo "No parameters given"
+        exit 1
+fi
+
+while true
+do
+        for process in $@
+        do
+                PIDs=""
+                PIDs=$(cat ps.fake | awk '{printf $2}')
+                echo $PIDs
+                if [ -n "$PIDs" ]
+                then
+                        echo "Sters"
+                fi
+        done
+        sleep 3
+done
+-----------------------------------------------------------------------------------------
+6. Find recursively in a directory, all the files that have write permissions for everyone. Display their names, and the permissions before and after removing the write permission for everybody. You will need to use chmod's symbolic permissions mode, instead of the octal mode we have used in class. The the chmod manual for details.
+
+
+
+#!/bin/bash
+
+a=$(find dir -printf "%p %M ")
+line="-"
+set -- $a
+while [ ! -z "$1" ]
+do
+        var=$2
+        if [[ ${var:0:1} = "-" && ${var:8:1} = "w" ]]
+        then
+                echo $2 $1
+                #chmod o-w $1
+                var="${var:0:8}$line${var:9:1}"
+                echo $var $1
+        fi
+        shift 2
+done
+
+-----------------------------------------------------------------------------------------
+7. Consider a file containing a username on each line. Generate a comma-separated string with email addresses of the users that exist. The email address will be obtained by appending "@scs.ubbcluj.ro" at the end of each username. Make sure the generated string does NOT end in a comma.
+
+
+#!/bin/bash
+
+a=$(cat user | grep ".")
+b=$(cat user | grep -c ".")
+mail="@scs.ubbcluj.ro"
+declare -i nr
+nr=1
+set -- $a
+while [ ! -z "$1" ]
+do
+        echo -n "$1$mail"
+        if [ ! $nr = $b ]
+        then
+                let nr++
+                echo -n ","
+        fi
+        shift 1
+done
+echo
+-----------------------------------------------------------------------------------------
+8. Display all the mounted file systems who are either smaller than than 1GB or have less than 20% free space.
+
+#!/bin/bash
+
+a=$(cat df.fake | awk '{printf $2" "$5" "$6" "}')
+set -- $a
+declare -i sem
+sem=0
+while [ ! -z "$1" ]
+do
+        if [[ $sem == 1 ]]
+        then
+                var1=$1
+                var2=$2
+                nr1=${var1%?}
+                nr2=${var2%?}
+                if (( $nr1 <= 1000 || $nr2 >= 81 ))
+                then
+                        echo "$3"
+                fi
+        else
+                sem=1
+        fi
+        shift 3
+done
+-----------------------------------------------------------------------------------------
+9. Write a script that finds in a given directory hierarchy, all duplicate files and displays their paths. Hint: use checksums to detect whether two files are identical.
+
+
+
+#!/bin/bash
+
+a=$(find dir -type f)
+#echo $a
+for argv in $a
+do
+        abspath=$(cd "$(dirname "$argv")" && pwd)/$(basename "$argv")
+        md5sum $abspath >> result
+done
+b=$(cat result | sort)
+rm result
+set -- $b
+declare -i sem
+sem=0
+while [ ! -z "$1" ]
+do
+        if [ $1 = $3 ]
+        then
+                echo $2
+                let sem=1
+        elif [ $sem -eq 1 ]
+        then
+                echo $2
+                let sem=0
+        fi
+        shift 2
+done
+
+-----------------------------------------------------------------------------------------
+1. Write a script that reads filenames and check for each file how many words contains on the 
+first line and the size of the file. Perform all required validations on the input data.
+
+#!/bin/bash
+
+word=""
+while [ ! "$word" = "exit" ]
+do
+        read word
+        for f in $(find dir -type f)
+        do
+                if [ $(basename "$f") == "$word" ]
+                then
+                        echo "$(cat $f | head -1 | wc -w)"
+                fi
+        done
+done
+
+-----------------------------------------------------------------------------------------
+2. Same as 1, but input by command line arguments
+
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+        echo "No parameters given"
+else
+word=""
+sem=0
+while [ ! -z "$1" ]
+do
+        for f in $(find dir -type f)
+        do
+                if [ $(basename "$f") == "$1" ]
+                then
+                        echo "$(basename "$f")" "$(cat $f | head -1 | wc -w)"
+                        let sem=1
+                fi
+        done
+        shift
+done
+fi
+if [[ $sem == 0 ]]
+then
+        echo "No files exist"
+fi
+
+-----------------------------------------------------------------------------------------
+3. Write a shell script that receives as argument a natural number N and generate N text files:
+- the name of the files will be of the form: file_X, where X={1,2,…, N}
+- each generated file will contain online lines between X and X+5 of the file /etc/passwd
+
+#!/bin/bash
+
+re='^[0-9]+$'
+
+if [ -z "$1" ]
+then
+        echo "No parameters given"
+
+elif [ ! -z "$2" ]
+then
+        echo "Too many parameters given"
+
+elif ! [[ $1 =~ $re ]] ; then
+   echo "Not a number"
+else
+        nr=0
+        while [[ $nr != "$1" ]]
+        do
+                let nr++
+                fname="file_$nr"
+                touch fileforpdf3/$fname
+                let nrl=nr+5
+                cat passwd.fake | head -n $nrl | tail -6 >> fileforpdf3/$fname
+        done
+fi
+
+
+-----------------------------------------------------------------------------------------
+4. Calculate the average of all process ids in the system per user
+
+#!/bin/bash
+
+re="^[0-9]+$"
+
+nr=0
+c=$(ps -ef | grep -c ".")
+num=$(ps -ef | tail -n $c | awk '{print $2}')
+for argv in $num
+do
+        let nr=nr+argv
+done
+#echo $nr
+#echo $c
+let nr=nr/c
+echo $nr
+
+
+-----------------------------------------------------------------------------------------
+5. Write a shell script that for each command line parameter will do:
+- if it’s a file, print the name, number of characters and lines in the file
+- if it’s a directory, print the name and how many files it contains (including subdirectories files
+
+#!/bin/bash
+
+drfl=$(find dir | grep -c ".")
+
+if [ -z "$1" ]
+then
+        echo "No parameters given"
+        exit 1
+fi
+while [ ! -z "$1" ]
+do
+        if [ -d "$1" ]
+        then
+                echo "Directory"
+                echo "$(find dir | grep -c ".")"
+        elif [ -f "$1" ]
+        then
+                echo "File"
+                echo "$1" Lines: "$(cat $1 | wc -l)" Chars: "$(cat $1 | wc -c)"
+        else echo "Nimic"
+        fi
+        shift
+done
+
+-----------------------------------------------------------------------------------------
+
+6. Write a shell script that received triplets of command line arguments consisting a filename, a 
+word and a number (validate input data). For each such triplet, print all the lines in the filename
+that contain the word exactly k times.
+
+#!/bin/bash
+
+re='^[0-9]+$'
+
+if [ -z "$1" ]
+then
+        echo "No parameterts given"
+        exit 1
+elif [ ! $(($# % 3)) == 0 ]
+then
+        echo "Not enough parameters"
+        exit 1
+elif [ ! -f $1 ]
+then
+        echo "Not file"
+        exit 1
+fi
+while [ ! -z "$1" ]
+do
+        if ! [[ $3 =~ $re ]]
+        then
+                echo "3rd parameter not number"
+        fi
+        while read line
+        do
+                nr=0
+                for word in $line
+                do
+                        if [ "$word" = "$2" ]
+                        then
+                                let nr++
+                        fi
+                done
+                if [[ $nr == $3 ]]
+   		then
+                        echo "$line"
+                fi
+        done < $1
+        shift 3
+done
+-----------------------------------------------------------------------------------------
+7. Write a shell script that, for all the users in /etc/passwd, creates a file with the same name as 
+the username and writes in it all the ip addresses from which that user has logged in. (hint: use the 
+last command to find the ip addresses
+
+#!/bin/bash
+
+a=$(cat passwd.fake | awk -F: '{print $1}')
+#echo $a
+for name in $a
+do
+        touch testdir/$name
+        echo -n "" > testdir/$name
+        IPs=$(cat last.fake | grep "$name" | awk '{print $3}' | sort | uniq)
+        for IP in $IPs
+        do
+                echo $IP >> testdir/$name
+        done
+done
+
+
+-----------------------------------------------------------------------------------------
+
+
+
+
+

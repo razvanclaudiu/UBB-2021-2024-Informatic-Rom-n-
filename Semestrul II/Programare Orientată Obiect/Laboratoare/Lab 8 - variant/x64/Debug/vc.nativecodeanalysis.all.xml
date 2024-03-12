@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>entities.h</FILENAME>
+      <LINE>23</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Masina', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Masina::{ctor}</FUNCTION>
+    <DECORATED>??0Masina@@QEAA@AEBV0@@Z</DECORATED>
+    <FUNCLINE>23</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>entities.h</FILENAME>
+      <LINE>52</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Pereche', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Pereche::{ctor}</FUNCTION>
+    <DECORATED>??0Pereche@@QEAA@AEBV0@@Z</DECORATED>
+    <FUNCLINE>52</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>entities.cpp</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'Pereche::second' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>Pereche::second</FUNCTION>
+    <DECORATED>?second@Pereche@@QEBAHXZ</DECORATED>
+    <FUNCLINE>48</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>entities.cpp</FILENAME>
+      <LINE>53</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'Pereche::set_second' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>Pereche::set_second</FUNCTION>
+    <DECORATED>?set_second@Pereche@@QEAAXH@Z</DECORATED>
+    <FUNCLINE>53</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26489</DEFECTCODE>
+    <DESCRIPTION>Don't dereference a pointer that may be invalid: 'allotemp.10'. '(temporary 10)' may have been invalidated at line 36 (lifetime.1).</DESCRIPTION>
+    <FUNCTION>MasinaRepository::cauta_repo</FUNCTION>
+    <DECORATED>?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+        <FILENAME>repository.cpp</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26487</DEFECTCODE>
+    <DESCRIPTION>Don't return a pointer '(30's result)' that may be invalid (lifetime.4).</DESCRIPTION>
+    <FUNCTION>MasinaRepository::cauta_repo</FUNCTION>
+    <DECORATED>?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+        <FILENAME>repository.cpp</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>95</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function 'MasinaListRepository::lst_empty_repo' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>MasinaListRepository::lst_empty_repo</FUNCTION>
+    <DECORATED>?lst_empty_repo@MasinaListRepository@@QEAAXXZ</DECORATED>
+    <FUNCLINE>95</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>100</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>26460</DEFECTCODE>
+    <DESCRIPTION>The reference argument 'allM' for function 'MasinaListRepository::lst_genereaza_repo' can be marked as const (con.3).</DESCRIPTION>
+    <FUNCTION>MasinaListRepository::lst_genereaza_repo</FUNCTION>
+    <DECORATED>?lst_genereaza_repo@MasinaListRepository@@QEAAXAEAV?$vector@VMasina@@V?$allocator@VMasina@@@std@@@std@@H@Z</DECORATED>
+    <FUNCLINE>100</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>service.cpp</FILENAME>
+      <LINE>32</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26489</DEFECTCODE>
+    <DESCRIPTION>Don't dereference a pointer that may be invalid: 'allotemp.3'. '(temporary 3)' may have been invalidated at line 32 (lifetime.1).</DESCRIPTION>
+    <FUNCTION>MasinaStore::cauta_srv</FUNCTION>
+    <DECORATED>?cauta_srv@MasinaStore@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>28</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+        <FILENAME>service.cpp</FILENAME>
+        <LINE>32</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>service.cpp</FILENAME>
+      <LINE>32</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26487</DEFECTCODE>
+    <DESCRIPTION>Don't return a pointer '(28's result)' that may be invalid (lifetime.4).</DESCRIPTION>
+    <FUNCTION>MasinaStore::cauta_srv</FUNCTION>
+    <DECORATED>?cauta_srv@MasinaStore@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>28</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+        <FILENAME>service.cpp</FILENAME>
+        <LINE>32</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\</FILEPATH>
+      <FILENAME>ui.cpp</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26494</DEFECTCODE>
+    <DESCRIPTION>Variable 'cmd' is uninitialized. Always initialize an object (type.5).</DESCRIPTION>
+    <FUNCTION>ConsoleUI::run</FUNCTION>
+    <DECORATED>?run@ConsoleUI@@QEAAXXZ</DECORATED>
+    <FUNCLINE>97</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>cmd</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

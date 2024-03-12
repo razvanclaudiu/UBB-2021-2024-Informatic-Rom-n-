@@ -1,0 +1,26 @@
+﻿  Lab6.cpp
+  entities.cpp
+  repository.cpp
+  service.cpp
+  tests.cpp
+  ui.cpp
+  validator.cpp
+  Running Code Analysis for C/C++...
+  Generating Code...
+  Lab6.vcxproj -> D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\x64\Debug\Lab6.exe
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\repository.h(13): warning C26455: Default constructor should not throw. Declare it 'noexcept' (f.6).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\vectorClass.h(41): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\vectorClass.h(37): warning C26455: Default constructor should not throw. Declare it 'noexcept' (f.6).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\vectorClass.h(73): warning C26823: Dereferencing a possibly null pointer 'allotemp.1' (lifetime.1).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\repository.cpp(51): warning C26489: Don't dereference a pointer that may be invalid: 'allotemp.4'. '(temporary 4)' may have been invalidated at line 51 (lifetime.1).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\repository.cpp(51): warning C26487: Don't return a pointer '(46's result)' that may be invalid (lifetime.4).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\repository.cpp(58): warning C26494: Variable 'j' is uninitialized. Always initialize an object (type.5).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\vectorClass.h(77): warning C26439: This kind of function should not throw. Declare it 'noexcept' (f.6).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\vectorClass.h(147): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\vectorClass.h(122): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\vectorClass.h(122): warning C26400: Do not assign the result of an allocation or a function call with an owner<T> return value to a raw pointer, use owner<T> instead (i.11).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\vectorClass.h(234): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\service.cpp(32): warning C26489: Don't dereference a pointer that may be invalid: 'allotemp.3'. '(temporary 3)' may have been invalidated at line 32 (lifetime.1).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\service.cpp(32): warning C26487: Don't return a pointer '(28's result)' that may be invalid (lifetime.4).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\vectorClass.h(47): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\ui.cpp(71): warning C26494: Variable 'cmd' is uninitialized. Always initialize an object (type.5).

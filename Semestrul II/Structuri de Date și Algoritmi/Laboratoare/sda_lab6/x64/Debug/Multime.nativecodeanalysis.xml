@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+      <FILENAME>Multime.cpp</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'this-&gt;urm'.</DESCRIPTION>
+    <FUNCTION>Multime::adauga</FUNCTION>
+    <DECORATED>?adauga@Multime@@QEAA_NH@Z</DECORATED>
+    <FUNCLINE>32</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+        <FILENAME>Multime.cpp</FILENAME>
+        <LINE>33</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'this-&gt;cauta(elem)==0')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+        <FILENAME>Multime.cpp</FILENAME>
+        <LINE>35</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+        <FILENAME>Multime.cpp</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'this-&gt;e[i]==-12345678' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+        <FILENAME>Multime.cpp</FILENAME>
+        <LINE>45</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'j' is equal to -1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+        <FILENAME>Multime.cpp</FILENAME>
+        <LINE>47</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'i!=-1' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+        <FILENAME>Multime.cpp</FILENAME>
+        <LINE>53</LINE>
+        <COLUMN>16</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'primLiber&gt;=m' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+        <FILENAME>Multime.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+        <FILENAME>Multime.cpp</FILENAME>
+        <LINE>58</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\sda_lab6\</FILEPATH>
+        <FILENAME>Multime.cpp</FILENAME>
+        <LINE>59</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'this-&gt;urm[-1]', (writable range is 0 to 59999)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

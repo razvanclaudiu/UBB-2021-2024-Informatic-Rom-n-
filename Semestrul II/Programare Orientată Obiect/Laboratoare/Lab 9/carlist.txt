@@ -1,0 +1,4 @@
+CJ34BGF,Honda Motor,HR-V,tractor
+SB12LDS,BMW Group,i4M50,tir
+SB99ZCF,Daimler,GLESUV,tir
+BV33UWU,Honda Motor,Civic Sedan,automobil

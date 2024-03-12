@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1649087240 source:c:\users\acer\onedrive\desktop\bellman_case\main.cpp
+	<iostream>
+	<fstream>
+	<bits/stdc++.h>
+
+1649087240 source:c:\users\acer\onedrive\desktop\bproject\main.cpp
+	<iostream>
+	<fstream>
+	<bits/stdc++.h>
+

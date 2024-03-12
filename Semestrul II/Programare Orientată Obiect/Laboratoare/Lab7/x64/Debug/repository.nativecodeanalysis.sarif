@@ -1,0 +1,391 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26489",
+          "message": {
+            "text": "Don't dereference a pointer that may be invalid: 'allotemp.4'. '(temporary 4)' may have been invalidated at line 51 (lifetime.1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/repository.cpp"
+                },
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 4,
+                  "endLine": 51,
+                  "endColumn": 30
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MasinaRepository::cauta_repo",
+                  "decoratedName": "?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/repository.cpp"
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "startColumn": 4
+                          }
+                        }
+                      },
+                      "importance": "important"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26487",
+          "message": {
+            "text": "Don't return a pointer '(46's result)' that may be invalid (lifetime.4)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/repository.cpp"
+                },
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 4,
+                  "endLine": 51,
+                  "endColumn": 30
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MasinaRepository::cauta_repo",
+                  "decoratedName": "?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/repository.cpp"
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "startColumn": 4
+                          }
+                        }
+                      },
+                      "importance": "important"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26494",
+          "message": {
+            "text": "Variable 'j' is uninitialized. Always initialize an object (type.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/repository.cpp"
+                },
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 9,
+                  "endLine": 58,
+                  "endColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MasinaRepository::ordonare_repo",
+                  "decoratedName": "?ordonare_repo@MasinaRepository@@QEAAXP6A_NAEBVMasina@@0@Z@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "j"
+          }
+        },
+        {
+          "ruleId": "C26439",
+          "message": {
+            "text": "This kind of function should not throw. Declare it 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/vectorClass.h"
+                },
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 24,
+                  "endLine": 77,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "vectorClass<Masina>::{ctor}",
+                  "decoratedName": "??0?$vectorClass@VMasina@@@@QEAA@$$QEAV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26409",
+          "message": {
+            "text": "Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/vectorClass.h"
+                },
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 13
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "vectorClass<Masina>::{ctor}",
+                  "decoratedName": "??0?$vectorClass@VMasina@@@@QEAA@H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26455",
+          "message": {
+            "text": "Default constructor should not throw. Declare it 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/vectorClass.h"
+                },
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 24,
+                  "endLine": 37,
+                  "endColumn": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "vectorClass<Masina>::{ctor}",
+                  "decoratedName": "??0?$vectorClass@VMasina@@@@QEAA@H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26481",
+          "message": {
+            "text": "Don't use pointer arithmetic. Use span instead (bounds.1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/vectorClass.h"
+                },
+                "region": {
+                  "startLine": 147,
+                  "startColumn": 5,
+                  "endLine": 147,
+                  "endColumn": 19
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "vectorClass<Masina>::at",
+                  "decoratedName": "?at@?$vectorClass@VMasina@@@@QEBAAEAVMasina@@H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26409",
+          "message": {
+            "text": "Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/vectorClass.h"
+                },
+                "region": {
+                  "startLine": 122,
+                  "startColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "vectorClass<Masina>::ensureCapacity",
+                  "decoratedName": "?ensureCapacity@?$vectorClass@VMasina@@@@AEAAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26400",
+          "message": {
+            "text": "Do not assign the result of an allocation or a function call with an owner<T> return value to a raw pointer, use owner<T> instead (i.11)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/vectorClass.h"
+                },
+                "region": {
+                  "startLine": 122,
+                  "startColumn": 21,
+                  "endLine": 122,
+                  "endColumn": 34
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "vectorClass<Masina>::ensureCapacity",
+                  "decoratedName": "?ensureCapacity@?$vectorClass@VMasina@@@@AEAAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26481",
+          "message": {
+            "text": "Don't use pointer arithmetic. Use span instead (bounds.1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/vectorClass.h"
+                },
+                "region": {
+                  "startLine": 234,
+                  "startColumn": 5,
+                  "endLine": 234,
+                  "endColumn": 23
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "vectorIterator<Masina>::element",
+                  "decoratedName": "?element@?$vectorIterator@VMasina@@@@QEBAAEAVMasina@@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31629.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/repository.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "c968f02ef40f686b9df1283081217ff3783ddd37e8ebcf7971fbbb9741386ba0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Folders/Scoala/Facultate/Sem 2/OOP/Lab7/vectorClass.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "05c599cbe2680c4fe65ed7b41be04121fdc7d4a5ad9ca1c72f1fe6ab5427d598"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/folders/scoala/facultate/sem 2/oop/lab7/repository.h"
+          },
+          "hashes": {
+            "sha-256": "ac0f2ca8ef48079640348abee2817982452b2e3c1764c30c20ee17bc3682500e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/folders/scoala/facultate/sem 2/oop/lab7/entities.h"
+          },
+          "hashes": {
+            "sha-256": "d615336bfa416db32dd939a12e73c422f17a17dde0d21eed818ca5e6d4d27dd4"
+          }
+        }
+      ]
+    }
+  ]
+}

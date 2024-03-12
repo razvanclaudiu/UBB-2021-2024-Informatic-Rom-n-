@@ -1,0 +1,21 @@
+[2022-04-01 13:10:25] [info] Start Program:
+Path:"C:\Users\Acer\OneDrive\Desktop\sda_lab2\x64\Debug\sda_lab2.exe"
+Arguments:
+Working directory: "C:\Users\Acer\OneDrive\Desktop\sda_lab2\"
+Modules: Selected: C:\Users\Acer\OneDrive\Desktop\sda_lab2\x64\Debug\sda_lab2.exe Excluded: 
+Sources: Selected: C:\Users\Acer\OneDrive\Desktop\sda_lab2 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Acer\AppData\Local\Temp\tyfgrryg.p0w 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-04-01 13:10:25] [info] Module: C:\Users\Acer\OneDrive\Desktop\sda_lab2\x64\Debug\sda_lab2.exe is selected because it matches selected pattern: C:\Users\Acer\OneDrive\Desktop\sda_lab2\x64\Debug\sda_lab2.exe
+[2022-04-01 13:10:28] [info] ----------------------------------------------------
+[2022-04-01 13:10:28] [info] Coverage binary generated in file: C:\Users\Acer\AppData\Local\Temp\tyfgrryg.p0w
+[2022-04-01 13:10:28] [info] ----------------------------------------------------

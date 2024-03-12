@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\</FILEPATH>
+      <FILENAME>entities.h</FILENAME>
+      <LINE>23</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Masina', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Masina::{ctor}</FUNCTION>
+    <DECORATED>??0Masina@@QEAA@AEBV0@@Z</DECORATED>
+    <FUNCLINE>23</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26489</DEFECTCODE>
+    <DESCRIPTION>Don't dereference a pointer that may be invalid: 'allotemp.10'. '(temporary 10)' may have been invalidated at line 36 (lifetime.1).</DESCRIPTION>
+    <FUNCTION>MasinaRepository::cauta_repo</FUNCTION>
+    <DECORATED>?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\</FILEPATH>
+        <FILENAME>repository.cpp</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26487</DEFECTCODE>
+    <DESCRIPTION>Don't return a pointer '(30's result)' that may be invalid (lifetime.4).</DESCRIPTION>
+    <FUNCTION>MasinaRepository::cauta_repo</FUNCTION>
+    <DECORATED>?cauta_repo@MasinaRepository@@QEAAAEBVMasina@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab 8\</FILEPATH>
+        <FILENAME>repository.cpp</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1645546363 source:c:\users\acer\onedrive\desktop\lab1_2\main.cpp
+	<iostream>
+	<fstream>
+
+1649077999 source:c:\users\acer\onedrive\desktop\lab1_2\lab1_2.cpp
+	<iostream>
+	<fstream>
+

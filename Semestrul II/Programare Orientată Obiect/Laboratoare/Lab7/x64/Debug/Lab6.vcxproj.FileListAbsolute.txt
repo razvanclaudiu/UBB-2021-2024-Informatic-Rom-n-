@@ -1,0 +1,12 @@
+C:\Users\Acer\OneDrive\Desktop\Lab6\x64\Debug\Lab6.exe
+C:\Users\Acer\OneDrive\Desktop\Lab6\x64\Debug\Lab6.exe.lastcodeanalysissucceeded
+C:\Users\Acer\OneDrive\Desktop\Lab6\x64\Debug\NativeCodeAnalysis.read.1.tlog
+C:\Users\Acer\OneDrive\Desktop\Lab7\x64\Debug\Lab6.exe
+C:\Users\Acer\OneDrive\Desktop\Lab7\x64\Debug\Lab6.exe.lastcodeanalysissucceeded
+C:\Users\Acer\OneDrive\Desktop\Lab7\x64\Debug\NativeCodeAnalysis.read.1.tlog
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab7\x64\Debug\Lab6.exe.lastcodeanalysissucceeded
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab7\x64\Debug\NativeCodeAnalysis.read.1.tlog
+C:\Users\Acer\OneDrive\Desktop\Facultate\OOP\Lab7\x64\Debug\Lab6.exe
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\x64\Debug\Lab6.exe.lastcodeanalysissucceeded
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\x64\Debug\NativeCodeAnalysis.read.1.tlog
+D:\Folders\Scoala\Facultate\Sem 2\OOP\Lab7\x64\Debug\Lab6.exe

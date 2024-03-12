@@ -1,0 +1,20 @@
+﻿  main.c
+C:\OOP laborator\Laborator2_4\Laborator2_4\main.c(75,92): warning C4020: 'service_actualizare_oferta': too many actual parameters
+C:\OOP laborator\Laborator2_4\Laborator2_4\main.c(104,54): warning C4133: 'function': incompatible types - from 'Listaoferte *' to 'Oferta *'
+C:\OOP laborator\Laborator2_4\Laborator2_4\main.c(104,68): warning C4020: 'service_sterge_oferta': too many actual parameters
+  service.c
+C:\OOP laborator\Laborator2_4\Laborator2_4\service.c(30,1): warning C4029: declared formal parameter list different from definition
+C:\OOP laborator\Laborator2_4\Laborator2_4\service.c(39,40): warning C4013: 'cauta_oferta_in_lista' undefined; assuming extern returning int
+C:\OOP laborator\Laborator2_4\Laborator2_4\service.c(45,33): warning C4133: 'function': incompatible types - from 'Listaoferte *' to 'Oferta *'
+C:\OOP laborator\Laborator2_4\Laborator2_4\service.c(51,40): warning C4028: formal parameter 1 different from declaration
+C:\OOP laborator\Laborator2_4\Laborator2_4\service.c(52,1): warning C4029: declared formal parameter list different from definition
+C:\OOP laborator\Laborator2_4\Laborator2_4\service.c(67,38): warning C4133: 'function': incompatible types - from 'Listaoferte *' to 'Oferta *'
+  teste.c
+C:\OOP laborator\Laborator2_4\Laborator2_4\teste.c(156,51): warning C4013: 'cauta_oferta_in_lista' undefined; assuming extern returning int
+C:\OOP laborator\Laborator2_4\Laborator2_4\teste.c(196,34): warning C4133: 'function': incompatible types - from 'Listaoferte *' to 'Oferta *'
+C:\OOP laborator\Laborator2_4\Laborator2_4\teste.c(233,39): warning C4133: 'function': incompatible types - from 'Listaoferte *' to 'Oferta *'
+C:\OOP laborator\Laborator2_4\Laborator2_4\teste.c(255,48): warning C4013: 'service_adauga_oferta' undefined; assuming extern returning int
+C:\OOP laborator\Laborator2_4\Laborator2_4\teste.c(308,54): warning C4013: 'service_actualizare_oferta' undefined; assuming extern returning int
+C:\OOP laborator\Laborator2_4\Laborator2_4\teste.c(343,47): warning C4013: 'service_sterge_oferta' undefined; assuming extern returning int
+  Generating Code...
+  Laborator2_4.vcxproj -> C:\OOP laborator\Laborator2_4\Debug\Laborator2_4.exe

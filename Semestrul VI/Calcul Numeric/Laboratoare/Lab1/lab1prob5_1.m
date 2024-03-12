@@ -33,5 +33,5 @@ while true
 end
 
 % Display the result
-fprintf('Approximation of ln(1 + %.2f) with 5 correct decimals: %.6f, used %d\n terms', x, approx_ln_fix,n+1);
+fprintf('Approximation of ln(1 + %.2f) with 5 correct decimals: %.6f, used %d terms\n', x, approx_ln_fix,n+1);
 fprintf('True value of ln(1 + %.2f): %.6f\n', x, true_ln_fix);

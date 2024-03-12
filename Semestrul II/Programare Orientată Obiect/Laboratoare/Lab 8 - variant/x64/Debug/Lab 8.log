@@ -1,0 +1,15 @@
+﻿  tests.cpp
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\tests.cpp(334,15): warning C4456: declaration of 'm2' hides previous local declaration
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\tests.cpp(325,9): message : see declaration of 'm2'
+  Lab 8.vcxproj -> C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\x64\Debug\Lab 8.exe
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\entities.h(23): warning C26432: If you define or delete any default operation in the type 'class Masina', define or delete them all (c.21).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\entities.h(52): warning C26432: If you define or delete any default operation in the type 'class Pereche', define or delete them all (c.21).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\entities.cpp(48): warning C26440: Function 'Pereche::second' can be declared 'noexcept' (f.6).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\entities.cpp(53): warning C26440: Function 'Pereche::set_second' can be declared 'noexcept' (f.6).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\repository.cpp(36): warning C26489: Don't dereference a pointer that may be invalid: 'allotemp.10'. '(temporary 10)' may have been invalidated at line 36 (lifetime.1).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\repository.cpp(36): warning C26487: Don't return a pointer '(30's result)' that may be invalid (lifetime.4).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\repository.cpp(95): warning C26440: Function 'MasinaListRepository::lst_empty_repo' can be declared 'noexcept' (f.6).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\repository.cpp(100): warning C26460: The reference argument 'allM' for function 'MasinaListRepository::lst_genereaza_repo' can be marked as const (con.3).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\service.cpp(32): warning C26489: Don't dereference a pointer that may be invalid: 'allotemp.3'. '(temporary 3)' may have been invalidated at line 32 (lifetime.1).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\service.cpp(32): warning C26487: Don't return a pointer '(28's result)' that may be invalid (lifetime.4).
+C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\ui.cpp(99): warning C26494: Variable 'cmd' is uninitialized. Always initialize an object (type.5).

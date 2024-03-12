@@ -1,0 +1,140 @@
+-i inplace //modificare permanenta fisier
+// - pattern
+{} - actiune
+
+inlocuieste cifre cu "X"
+sed 's/[0-9]/X/' angajati.txt - prima aparitie de pe linie
+sed 's/[0-9]/X/g' angajati.txt - tot
+sed 's/[0-9]/X/2' angajati.txt - a doua aparitie de pe linie
+
+afiseaza coloana de dupa $
+awk '{print $1}' angajati.txt
+
+afiseaza coloana 2, dupa coloana 1
+awk '{print $2, $1}' angajati.txt
+
+afiseaza pe cei cu salari mai mari de 3000
+cat angajati.txt | awk '$5 > 3000 {print $0}'
+
+afiseaza pe cei cu salari mai mari de 3000 si il cheama Victor
+cat angajati.txt | awk '$5 > 3000 && $1 == "Victor" {print $0}'
+
+
+afiseaza pe cei care contin in linie "Victor"
+cat angajati.txt | awk '/Victor/ {print $0}'
+
+afiseaza numarul liniei pentru fiecare linie
+awk '{print NR}' angajati.txt
+
+afiseaza "Eu ..." inainte de afisarea textului
+awk 'BEGIN{print "Eu sunt intotdeauna prima."}' angajati.txt
+
+afiseaza "Eu ..." inainte de afisarea textului dupa Linie pentru fiecare linie
+awk 'BEGIN{print "Eu sunt intotdeauna prima."} {print "Linie"}' angajati.txt
+
+afiseaza numarul ultimei linii
+awk 'BEGIN{i=0} {i=i+1} END{print "Valoarea lui i este:", i}' angajati.txt
+
+
+afiseaza numarul ultimei linii
+awk '{i=i+1} END{print "Valoarea lui i este:", i}' angajati.txt
+
+numarul de angati
+cat angajati.txt | grep -c '.'
+
+afiseaza numarul ultimei linii
+awk 'END{print "Numaruld de angajati:", NR}' angajati.txt
+
+afiseaza numele de utilizator, da nu prea
+cat /etc/passwd awk '{print $1}' 
+
+afiseaza numele de utilizator, cu separator ":"
+cat /etc/passwd awk -F: '{print $1}' 
+
+afiseaza numele de utilizator, cu separator ":"
+cat /etc/passwd awk 'BEGIN{FS = ":"} {print $1}'  
+
+afiseaza numele de utilizator, cu separator " :\t"
+cat /etc/passwd awk -F:'[ :\t]' '{print $1}' 
+
+afiseaza numele de utilizator, cu separator " :\t"
+cat /etc/passwd awk 'BEGIN{FS = "[ :\t]"} {print $1}' 
+
+
+
+exercitii
+
+1. Sa se determine nr total de procese in acest moment.
+
+//procesele utilizator care da comanda
+ps
+
+ps -ef / ps -eF
+
+ps -ef | grep -c '.'
+
+ps -ef | sed '1d' | grep -c '.'
+
+ps -ef | sed '1d' | wc -1
+
+2. Sa se determine nr total de procese in acest moment de un anumit utilizator.
+
+ps -f -U root
+
+> creeaza, >>append
+ps -ef | grep '^root' >
+
+3. Sa se determine nr total de fisiere dintr-un director
+
+ls -l /bin | grep '^-' //complicat, incomplet nu verifica subdirectoare
+
+//f -file d -directory
+find /bin -type f
+
+find /bin -type f | wc -1
+
+find /bin -type f | sed 's/ \/bin\/ //'
+
+
+
+find /bin -executable
+
+find /bin -perm /u=x, g=x, o=x
+find /bin -perm /a=x
+
+7.
+
+last | grep 'Mar  8'
+
+last | grep 'Mar  8' | cut -d " " -f 1 | sort | uniq
+
+last | awk '$5 == "Mar" && $6 == "8" {print $1}' | sort | uniq
+
+last | awk '$1 ~ /^..ir/ && $5 == "Mar" && $6 == "8" {print $1}' | sort | uniq
+
+last | awk '/^..ir/ && $5 == "Mar" && $6 == "8" {print $1}' | sort | uniq
+
+
+//ex ptr test
+
+1. cat last.fake | grep 'Sun' | grep 'economica' | awk '{print $1}' | sort | uniq
+
+2. cat last.fake | sed 's/:/ /g' | awk '$7 >22 {print $1}' | sort | uniq
+
+3. cat passwd.fake | grep '^m' | awk -F: '$3 % 7 == 0 {print $5}'
+
+4. cat ps.fake | grep 'root' | awk '{print $6}' | sort | uniq
+
+5. cat passwd.fake | grep '^[a-z]\{4\}[0-9]\{2\}88' | awk -F: '{print $5}'
+
+6. cat passwd.fake | grep '^[a-z]\{4\}023' | awk -F: '{print $5}'
+
+7. cat last.fake | grep '^t' | awk '$2 ~/pts\/9/ {print $0}' | awk '{print $1}'
+
+8. cat ps.fake | grep '^r' | awk '{print $1}' | sort | uniq | sed 's/[aeiou]/&&/g'
+
+9. cat passwd.fake | sed 's/[a-zA-Z0-9 ]//g' | sort | uniq
+
+10. cat passwd.fake | sed 's/[^r]//g' | sort | uniq
+
+11. cat ps.fake | awk 'BEGIN{sum=0; i=0} {sum+=$2}{i+=1} END{print sum/i}'

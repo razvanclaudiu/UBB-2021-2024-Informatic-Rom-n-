@@ -1,0 +1,4 @@
+SB99ZCF,Daimler,GLE SUV,tir
+CJ34BGF,Honda Motor,HR-V,tractor
+SB67ARA,Honda Motor,Civic Sedan,automobil
+SB67ARN,Toyota Motor Corporation,Toyota Yariss,automobil

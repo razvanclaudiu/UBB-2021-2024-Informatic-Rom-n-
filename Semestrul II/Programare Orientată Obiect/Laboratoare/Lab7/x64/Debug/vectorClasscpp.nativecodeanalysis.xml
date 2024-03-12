@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab7\</FILEPATH>
+      <FILENAME>vectorClasscpp.cpp</FILENAME>
+      <LINE>9</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;int&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$vectorClass@H@@QEAA@H@Z</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab7\</FILEPATH>
+      <FILENAME>vectorClasscpp.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor should not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;int&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$vectorClass@H@@QEAA@H@Z</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab7\</FILEPATH>
+      <FILENAME>vectorClasscpp.cpp</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26401</DEFECTCODE>
+    <DESCRIPTION>Do not delete a raw pointer that is not an owner&lt;T&gt; (i.11).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;int&gt;::{dtor}</FUNCTION>
+    <DECORATED>??1?$vectorClass@H@@QEAA@XZ</DECORATED>
+    <FUNCLINE>40</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Acer\OneDrive\Desktop\Lab7\</FILEPATH>
+      <FILENAME>vectorClasscpp.cpp</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>vectorClass&lt;int&gt;::{dtor}</FUNCTION>
+    <DECORATED>??1?$vectorClass@H@@QEAA@XZ</DECORATED>
+    <FUNCLINE>40</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

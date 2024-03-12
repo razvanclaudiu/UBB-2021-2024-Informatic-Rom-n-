@@ -1,0 +1,21 @@
+[2022-04-13 22:55:27] [info] Start Program:
+Path:"C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\x64\Debug\Lab 8.exe"
+Arguments:
+Working directory: "C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2"
+Modules: Selected: C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\x64\Debug\Lab 8.exe Excluded: 
+Sources: Selected: C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2 Excluded: ui.cpp 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Acer\AppData\Local\Temp\aaqwhtyt.hqc 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-04-13 22:55:27] [info] Module: C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\x64\Debug\Lab 8.exe is selected because it matches selected pattern: C:\Users\Acer\OneDrive\Desktop\Lab 8 - Copy2\x64\Debug\Lab 8.exe
+[2022-04-13 22:55:28] [info] ----------------------------------------------------
+[2022-04-13 22:55:28] [info] Coverage binary generated in file: C:\Users\Acer\AppData\Local\Temp\aaqwhtyt.hqc
+[2022-04-13 22:55:28] [info] ----------------------------------------------------

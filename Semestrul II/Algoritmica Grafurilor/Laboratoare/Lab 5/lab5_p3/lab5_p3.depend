@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1653402613 source:c:\users\acer\onedrive\desktop\lab5_p3\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<bits/stdc++.h>
+	<vector>
+
