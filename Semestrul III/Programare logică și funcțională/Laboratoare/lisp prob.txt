@@ -1,0 +1,231 @@
+/1
+(defun dfs(node cnt level m_list search v)
+    (write node)
+    ;(write level)
+        (cond
+        ((eq node search) m_list)
+        ((null m_list)
+            v
+        )
+        ((= cnt 0)
+            m_list)
+        (T
+            (setq son (dfs (car m_list) (cadr m_list) (+ level 1) (cddr m_list) search v) )
+            (dfs node (- cnt 1) level son search v))
+    )
+)
+
+(defun dfsw (l)
+    (dfs (car l) (cadr l) 0 (cddr l) 'C ())
+)
+(dfsw '(A 2 B 0 C 2 D 0 E 0))
+
+
+/4
+(defun transform(l)
+    (cond 
+        ((null l) nil)
+        ((null (cadr l)) (append (list (car l)) (list 0) ))
+        ((null (caddr l)) (append (list (car l)) (list 1) (transform (cadr l))))
+        (t (append (list (car l)) (list 2) (transform (cadr l)) (transform (caddr l))))
+    )
+)
+
+(print (transform '(A (B) (C (D) (E)))))
+(print (transform '(A(B(D)(E(F(G)(H))))(C(I(J(K)))))))
+
+
+/5
+(defun explore (x node level children l)
+        (cond
+            ((eq x node) level)
+            ((null l) nil)
+            ((= children 0) l)
+            (t 
+                (setq new (explore x (car l) (+ level 1) (cadr l) (cddr l)))
+                (cond 
+                    ((listp new) (explore x node level (- children 1) new))
+                    (t new)
+                )
+            )
+        )
+)
+
+(defun solve (x l)
+    (explore x (car l) 0 (cadr l) (cddr l))  
+)
+
+(print (solve 'A(list 'A 2 'B 2 'C 2 'E 0 'F 1 'G 0 'D 1 'H 2 'I 0 'J 2 'K 0 'L 0 'M 2 'N 0 'O 2 'P 0 'Q 2 'R 0 'S 1 'T 0)))
+
+/6
+(defun inorder (node children list v)
+    (cond 
+        ((null list) v)
+        ((= 0 children) )
+        ((= 1 children) (inorder (car list) (cadr list) (cddr list) (append v (list (node)))))
+        (t 
+            (inorder (car list) ())
+        )
+    )
+)
+
+(defun solve(l)
+    ((inorder (car l) (cadr l) (caddr l) ()))
+)
+
+/8
+(defun traverse(l)
+    (cond 
+        ((null (car l)) nil )
+        (t
+            (append (traverse (cadr l)) (list (car l)) (traverse (caddr l)))
+        )
+    )
+)
+
+
+(print (traverse '(1 (2) (3 (4) (5))) ))
+
+/9
+(defun _convert (l stack)
+	(cond
+		((null l) (car stack))
+
+		((and (numberp (car l)) (= (car l) 0)) (_convert (cons (list (cadr l)) (cddr l)) stack))
+		((and (numberp (car l)) (= (car l) 1)) (_convert (cons (list (car stack) (cadr l)) (cddr l)) (cdr stack)))
+		((and (numberp (car l)) (= (car l) 2)) (_convert (cons (list (cadr stack) (car stack) (cadr l)) (cddr l))  (cddr stack)))
+		(T (_convert (cdr l) (cons (car l) stack)))
+	)
+)
+
+; convert(l) => converted list
+; convert(l1..ln) = reverse(convert(reverse(l), nil)))
+(defun convert (l)
+	(reverse(_convert (reverse l) nil))
+)
+
+(print (convert '(A 0)))
+; => '(A)
+(print (convert '(A 1 B 0)))
+; => '(A (B))
+(print (convert '(A 2 B 1 C 2 D 0 E 0 F 1 G 0)))
+(print (convert '(A 2 B 0 C 2 D 0 E 0)))
+
+/10
+(defun getlevel (x l lvl)
+    (cond 
+        ((null (car l)) nil)
+        ((eq (car l) x) lvl)
+        (t 
+            (or (getlevel x (cadr l) (+ 1 lvl)) (getlevel x (caddr l) (+ 1 lvl)))
+        )
+    )
+)
+
+(print (getlevel 1 '(1 (2) (3 (4) (5))) 0))
+
+/11
+(defun get-level (tree level)
+	(cond
+		((null tree) nil)
+		((= level 0) (list (car tree)))
+		(T (append (get-level (cadr tree) (- level 1)) (get-level (caddr tree) (- level 1))))
+	)
+)
+
+;(print (get-level '(1 (2 (3) (4)) (5 (6) (7))) 2))
+; => '(3 4 6 7)
+
+(defun _max-level (tree max lvl)
+	(setf me (get-level tree lvl))
+	(cond
+		((null me) max)
+		((> (list-length me) (list-length max)) (_max-level tree me (+ lvl 1)))
+		(T (_max-level tree max (+ lvl 1)))
+	)
+)
+
+;(print (_max-level '(1 (2 (3) (4)) (5 (6) (7))) '() 0))
+; => '(3 4 6 7)
+
+(defun max-level (tree)
+	(_max-level tree '() 0)
+)
+
+(print (max-level  '(1 (2 (3) (4)) (5 (6) (7))) ) )
+
+/12
+(defun traverse(l)
+    (cond 
+        ((null (car l)) nil )
+        (t
+            (append (list (car l)) (traverse (cadr l)) (traverse (caddr l)))            
+        )
+    )
+)
+
+
+(print (traverse '(1 (2) (3 (5) (4))) ))
+
+/13
+(defun explore_path (l level node)
+(cond
+  ((null (car l)) nil)
+  ((equal (car l) node) (list (car l)))
+  (T 
+    (setq left (explore_path (cadr l) (+ level 1) node ))
+	  (cond 
+		    ((null left) (setq right (explore_path (caddr l) (+ level 1) node ))
+                     (cond
+                         ((null right) NIL)
+                         (T (append (list (car l)) right))
+                      )
+        )
+		    (T (append (list (car l)) left ))
+    )
+ )
+)
+)
+(print (explore_path '(A (B) (C (D) (E))) 0 'E ))
+(print (explore_path '(A(B(D)(E(F(G)(H))))(C(I(J(K))))) 0 'A))
+(print (explore_path '(A(B(D)(E(F(G)(H))))(C(I(J(K))))) 0 'K))
+
+/15
+;postorder traversal of tree of type (2) 
+
+(defun traverse(l)
+    (cond 
+        ((null (car l)) nil)
+        (t
+            (append (traverse (cadr l)) (traverse (caddr l)) (list (car l)) )
+        )
+    )
+)
+
+(print (traverse '(1 (2) (3 (4) (5))) ))
+
+/16
+
+(defun balanced (l level)
+    (cond
+        ((null (car l)) level)
+        (T (setq left (balanced (cadr l) (+ level 1)))
+            (setq right (balanced (caddr l) (+ level 1)))
+            (cond 
+                ((or (null left)(null right)) NIL)
+                ((< (abs (- left right)) 2) (cond ((< left right) right) (T left)))
+                (T NIL)
+            )
+        )
+    )    
+)
+
+(defun wrap (result)
+    (cond 
+        ((null result) NIL)
+        (T T)
+    )
+)
+
+(print (wrap (balanced '(A (B) (C (D) (E))) 0)))
+(print (wrap (balanced '(A(B(D)(E(F(G)(H))))(C(I(J(K))))) 0)))
